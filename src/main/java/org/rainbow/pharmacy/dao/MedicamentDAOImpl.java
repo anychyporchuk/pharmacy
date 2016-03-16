@@ -17,18 +17,6 @@ public class MedicamentDAOImpl implements MedicamentDAO {
 	public List<Medicament> getAllMedicaments(){
 		return sessionFactory.getCurrentSession().createQuery("from Medicament").list(); 
 	}
-	
-	
-	public void test(){
-		String hql = "from Medicament m, Category c where m.category=c.categoryId";
-		List<Object[]> list =  sessionFactory.getCurrentSession().createQuery(hql).list();
-		/*for (Object[] aRow : listResult) {
-			Medicament product = (Medicament) aRow[0];
-		    Category category = (Category) aRow[1];
-		    System.out.println(product.getName() + " - " + category.getCategoryName());
-		}
-		return listResult;*/
-	}
 
 
 	@Override
